@@ -1,0 +1,44 @@
+From d1f29827f55139d541cd5976205295e55d4e47e8 Mon Sep 17 00:00:00 2001
+From: Athenas Jimenez <athenas.jimenez.gonzalez@intel.com>
+Date: Mon, 3 Aug 2015 18:20:07 +0000
+Subject: [PATCH] Fix mime-types version
+
+Signed-off-by: Athenas Jimenez <athenas.jimenez.gonzalez@intel.com>
+---
+ rubygem-ast.gemspec | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/rubygem-ast.gemspec b/rubygem-ast.gemspec
+index 2390743..d4a1baf 100644
+--- a/rubygem-ast.gemspec
++++ b/rubygem-ast.gemspec
+@@ -27,7 +27,7 @@ Gem::Specification.new do |s|
+       s.add_development_dependency(%q<simplecov>, [">= 0"])
+       s.add_development_dependency(%q<coveralls>, [">= 0"])
+       s.add_development_dependency(%q<json_pure>, [">= 0"])
+-      s.add_development_dependency(%q<mime-types>, ["~> 1.25"])
++      s.add_development_dependency(%q<mime-types>, [">= 1.25"])
+       s.add_development_dependency(%q<yard>, [">= 0"])
+       s.add_development_dependency(%q<kramdown>, [">= 0"])
+     else
+@@ -37,7 +37,7 @@ Gem::Specification.new do |s|
+       s.add_dependency(%q<simplecov>, [">= 0"])
+       s.add_dependency(%q<coveralls>, [">= 0"])
+       s.add_dependency(%q<json_pure>, [">= 0"])
+-      s.add_dependency(%q<mime-types>, ["~> 1.25"])
++      s.add_dependency(%q<mime-types>, [">= 1.25"])
+       s.add_dependency(%q<yard>, [">= 0"])
+       s.add_dependency(%q<kramdown>, [">= 0"])
+     end
+@@ -48,7 +48,7 @@ Gem::Specification.new do |s|
+     s.add_dependency(%q<simplecov>, [">= 0"])
+     s.add_dependency(%q<coveralls>, [">= 0"])
+     s.add_dependency(%q<json_pure>, [">= 0"])
+-    s.add_dependency(%q<mime-types>, ["~> 1.25"])
++    s.add_dependency(%q<mime-types>, [">= 1.25"])
+     s.add_dependency(%q<yard>, [">= 0"])
+     s.add_dependency(%q<kramdown>, [">= 0"])
+   end
+-- 
+2.4.2
+
