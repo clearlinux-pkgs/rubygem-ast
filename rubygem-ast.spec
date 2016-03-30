@@ -4,34 +4,22 @@
 #
 Name     : rubygem-ast
 Version  : 2.1.0
-Release  : 5
+Release  : 6
 URL      : https://rubygems.org/downloads/ast-2.1.0.gem
 Source0  : https://rubygems.org/downloads/ast-2.1.0.gem
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : MIT
 BuildRequires : ruby
-BuildRequires : rubygem-bacon
 BuildRequires : rubygem-bacon-colored_output
 BuildRequires : rubygem-bundler
 BuildRequires : rubygem-coveralls
-BuildRequires : rubygem-docile
-BuildRequires : rubygem-domain_name
-BuildRequires : rubygem-http-cookie
 BuildRequires : rubygem-json_pure
 BuildRequires : rubygem-kramdown
-BuildRequires : rubygem-mime-types
-BuildRequires : rubygem-netrc
 BuildRequires : rubygem-rdoc
 BuildRequires : rubygem-rest-client
 BuildRequires : rubygem-rubygems-tasks
 BuildRequires : rubygem-simplecov
-BuildRequires : rubygem-simplecov-html
-BuildRequires : rubygem-term-ansicolor
-BuildRequires : rubygem-thor
-BuildRequires : rubygem-tins
-BuildRequires : rubygem-unf
-BuildRequires : rubygem-unf_ext
 BuildRequires : rubygem-yard
 
 %description
@@ -67,91 +55,25 @@ cp -pa .%{_bindir}/* \
 %{buildroot}%{_bindir}/
 fi
 
-%check
-export http_proxy=http://127.0.0.1:9/
-export https_proxy=http://127.0.0.1:9/
-export no_proxy=localhost
-pushd %{buildroot}%{gem_dir}/gems/ast-2.1.0
-ruby -v -I.:lib:test test*/test_*.rb
-popd
-
 
 %files
 %defattr(-,root,root,-)
-/usr/lib64/ruby/gems/2.2.0/cache/ast-2.1.0.gem
-/usr/lib64/ruby/gems/2.2.0/doc/ast-2.1.0/ri/AST/Node/%2b-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/ast-2.1.0/ri/AST/Node/%3c%3c-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/ast-2.1.0/ri/AST/Node/%3d%3d-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/ast-2.1.0/ri/AST/Node/append-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/ast-2.1.0/ri/AST/Node/assign_properties-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/ast-2.1.0/ri/AST/Node/cdesc-Node.ri
-/usr/lib64/ruby/gems/2.2.0/doc/ast-2.1.0/ri/AST/Node/children-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/ast-2.1.0/ri/AST/Node/concat-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/ast-2.1.0/ri/AST/Node/dup-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/ast-2.1.0/ri/AST/Node/eql%3f-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/ast-2.1.0/ri/AST/Node/fancy_type-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/ast-2.1.0/ri/AST/Node/hash-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/ast-2.1.0/ri/AST/Node/inspect-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/ast-2.1.0/ri/AST/Node/new-c.ri
-/usr/lib64/ruby/gems/2.2.0/doc/ast-2.1.0/ri/AST/Node/original_dup-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/ast-2.1.0/ri/AST/Node/to_a-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/ast-2.1.0/ri/AST/Node/to_ast-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/ast-2.1.0/ri/AST/Node/to_s-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/ast-2.1.0/ri/AST/Node/to_sexp-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/ast-2.1.0/ri/AST/Node/type-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/ast-2.1.0/ri/AST/Node/updated-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/ast-2.1.0/ri/AST/Processor/Mixin/cdesc-Mixin.ri
-/usr/lib64/ruby/gems/2.2.0/doc/ast-2.1.0/ri/AST/Processor/Mixin/handler_missing-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/ast-2.1.0/ri/AST/Processor/Mixin/process-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/ast-2.1.0/ri/AST/Processor/Mixin/process_all-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/ast-2.1.0/ri/AST/Processor/cdesc-Processor.ri
-/usr/lib64/ruby/gems/2.2.0/doc/ast-2.1.0/ri/AST/Sexp/cdesc-Sexp.ri
-/usr/lib64/ruby/gems/2.2.0/doc/ast-2.1.0/ri/AST/Sexp/s-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/ast-2.1.0/ri/AST/cdesc-AST.ri
-/usr/lib64/ruby/gems/2.2.0/doc/ast-2.1.0/ri/cache.ri
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/.gitignore
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/.travis.yml
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/.yardopts
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/CHANGELOG.md
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/Gemfile
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/LICENSE.MIT
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/README.YARD.md
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/README.md
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/Rakefile
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/ast.gemspec
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/coverage/.last_run.json
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/coverage/.resultset.json
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/coverage/.resultset.json.lock
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/coverage/assets/0.10.0/application.css
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/coverage/assets/0.10.0/application.js
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/coverage/assets/0.10.0/colorbox/border.png
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/coverage/assets/0.10.0/colorbox/controls.png
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/coverage/assets/0.10.0/colorbox/loading.gif
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/coverage/assets/0.10.0/colorbox/loading_background.png
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/coverage/assets/0.10.0/favicon_green.png
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/coverage/assets/0.10.0/favicon_red.png
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/coverage/assets/0.10.0/favicon_yellow.png
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/coverage/assets/0.10.0/loading.gif
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/coverage/assets/0.10.0/magnify.png
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/coverage/assets/0.10.0/smoothness/images/ui-bg_flat_0_aaaaaa_40x100.png
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/coverage/assets/0.10.0/smoothness/images/ui-bg_flat_75_ffffff_40x100.png
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/coverage/assets/0.10.0/smoothness/images/ui-bg_glass_55_fbf9ee_1x400.png
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/coverage/assets/0.10.0/smoothness/images/ui-bg_glass_65_ffffff_1x400.png
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/coverage/assets/0.10.0/smoothness/images/ui-bg_glass_75_dadada_1x400.png
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/coverage/assets/0.10.0/smoothness/images/ui-bg_glass_75_e6e6e6_1x400.png
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/coverage/assets/0.10.0/smoothness/images/ui-bg_glass_95_fef1ec_1x400.png
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/coverage/assets/0.10.0/smoothness/images/ui-bg_highlight-soft_75_cccccc_1x100.png
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/coverage/assets/0.10.0/smoothness/images/ui-icons_222222_256x240.png
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/coverage/assets/0.10.0/smoothness/images/ui-icons_2e83ff_256x240.png
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/coverage/assets/0.10.0/smoothness/images/ui-icons_454545_256x240.png
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/coverage/assets/0.10.0/smoothness/images/ui-icons_888888_256x240.png
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/coverage/assets/0.10.0/smoothness/images/ui-icons_cd0a0a_256x240.png
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/coverage/index.html
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/lib/ast.rb
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/lib/ast/node.rb
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/lib/ast/processor.rb
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/lib/ast/processor/mixin.rb
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/lib/ast/sexp.rb
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/test/helper.rb
-/usr/lib64/ruby/gems/2.2.0/gems/ast-2.1.0/test/test_ast.rb
-/usr/lib64/ruby/gems/2.2.0/specifications/ast-2.1.0.gemspec
+/usr/lib64/ruby/gems/2.3.0/cache/ast-2.1.0.gem
+/usr/lib64/ruby/gems/2.3.0/gems/ast-2.1.0/.gitignore
+/usr/lib64/ruby/gems/2.3.0/gems/ast-2.1.0/.travis.yml
+/usr/lib64/ruby/gems/2.3.0/gems/ast-2.1.0/.yardopts
+/usr/lib64/ruby/gems/2.3.0/gems/ast-2.1.0/CHANGELOG.md
+/usr/lib64/ruby/gems/2.3.0/gems/ast-2.1.0/Gemfile
+/usr/lib64/ruby/gems/2.3.0/gems/ast-2.1.0/LICENSE.MIT
+/usr/lib64/ruby/gems/2.3.0/gems/ast-2.1.0/README.YARD.md
+/usr/lib64/ruby/gems/2.3.0/gems/ast-2.1.0/README.md
+/usr/lib64/ruby/gems/2.3.0/gems/ast-2.1.0/Rakefile
+/usr/lib64/ruby/gems/2.3.0/gems/ast-2.1.0/ast.gemspec
+/usr/lib64/ruby/gems/2.3.0/gems/ast-2.1.0/lib/ast.rb
+/usr/lib64/ruby/gems/2.3.0/gems/ast-2.1.0/lib/ast/node.rb
+/usr/lib64/ruby/gems/2.3.0/gems/ast-2.1.0/lib/ast/processor.rb
+/usr/lib64/ruby/gems/2.3.0/gems/ast-2.1.0/lib/ast/processor/mixin.rb
+/usr/lib64/ruby/gems/2.3.0/gems/ast-2.1.0/lib/ast/sexp.rb
+/usr/lib64/ruby/gems/2.3.0/gems/ast-2.1.0/test/helper.rb
+/usr/lib64/ruby/gems/2.3.0/gems/ast-2.1.0/test/test_ast.rb
+/usr/lib64/ruby/gems/2.3.0/specifications/ast-2.1.0.gemspec
